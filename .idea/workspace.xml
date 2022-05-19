@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c57917fa-9946-4393-a350-0d9a16e51cae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GreenFuture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GreenFuture.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/GreenFuture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/DefineTripController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/DefineTripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/DefineTripController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/GreenFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/GreenFuture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/greenfuture/DefineTripController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/greenfuture/DefineTripController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/greenfuture/GreenFuture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/greenfuture/GreenFuture.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../OPT/test" />
   </component>
   <component name="RunManager">
     <configuration name="GreenFuture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -76,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652966158531</updated>
-      <workItem from="1652966159673" duration="1105000" />
+      <workItem from="1652966159673" duration="1609000" />
     </task>
     <servers />
   </component>
