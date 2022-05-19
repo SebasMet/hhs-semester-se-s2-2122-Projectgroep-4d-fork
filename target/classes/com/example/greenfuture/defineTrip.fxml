@@ -24,11 +24,11 @@
         </rowConstraints>
          <children>
             <Button mnemonicParsing="false" text="Bevestig" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label text="Selecteer een voertuig en gereisde kilometers" />
+            <Label text="Selecteer een voertuig en gereisde kilometers" GridPane.columnSpan="2147483647" />
             <Label text="Selecteer voertuig" GridPane.rowIndex="1" />
             <Label text="Selecteer kilometers" GridPane.rowIndex="2" />
             <ComboBox fx:id="vehicles" prefWidth="150.0" promptText="Selecteer voertuig" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField promptText="Afstand in kilometers" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>
