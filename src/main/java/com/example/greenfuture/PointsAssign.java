@@ -25,8 +25,8 @@ public class PointsAssign implements Initializable {
         return points;
     }
 
-    public double calcPoints(){
-
+    public double calcPoints(PointsAssign Pick, int km){
+        return Pick.getPoints() * km;
     }
 
     @Override
