@@ -16,11 +16,7 @@ public class PointsAssign implements Initializable {
         this.vehicle = vehicle;
         this.points = points;
     }
-
-    public String getVehicle() {
-        return vehicle;
-    }
-
+    
     public double getPoints() {
         return points;
     }
