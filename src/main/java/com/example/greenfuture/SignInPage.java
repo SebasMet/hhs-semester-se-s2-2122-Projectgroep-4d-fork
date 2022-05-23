@@ -25,10 +25,10 @@ public class SignInPage {
     private Label welcomeText;
 
     @FXML
-    protected void onHelloButtonClick() throws IOException {
+    protected void onInlogButtonClick() throws IOException {
         HashMap<String, String> users = new HashMap<>();
 
-        users.put("Ahmet","123");
+        users.put("Ahmet", "123");
         users.put("Jochem", "1234");
         users.put("Sebastian", "12345");
         users.put("Vashy", "123456");
@@ -40,11 +40,9 @@ public class SignInPage {
             if (Objects.equals(passwordOfUser, pass_field.getText())) {
                 welcomeText.setText("Inlog succesvol");
                 //Redirect moet nog geadd worden
-            }
-            else
+            } else
                 welcomeText.setText("Dit wachtwoord is incorrect");
-        }
-        else
+        } else
             welcomeText.setText("Deze gebruiker bestaat niet");
     }
 }
