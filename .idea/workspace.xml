@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98cc4773-af93-4e66-a2e1-d4ab26e009d7" name="Changes" comment="Add login page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/SignInPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/login-page.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/greenfuture/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/greenfuture/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/greenfuture/SignInPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/greenfuture/SignInPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/greenfuture/login-page.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="98cc4773-af93-4e66-a2e1-d4ab26e009d7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
