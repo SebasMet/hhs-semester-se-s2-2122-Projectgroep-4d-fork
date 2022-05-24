@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="23.0" layoutY="135.0" prefHeight="34.0" prefWidth="755.0" style="-fx-background-color: #11AC00;">
@@ -24,18 +23,18 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="675.0" layoutY="4.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #FFFFFF;" text="Terug" />
+            <Button fx:id="backBtn" layoutX="675.0" layoutY="4.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #FFFFFF;" text="Terug" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="23.0" layoutY="182.0" prefHeight="343.0" prefWidth="755.0" style="-fx-background-color: #11AC00;">
          <children>
-            <TextField alignment="CENTER" layoutX="280.0" layoutY="85.0" prefHeight="34.0" prefWidth="194.0" promptText="Aantal kilometers gereisd">
+            <TextField fx:id="distanceField" alignment="CENTER" layoutX="280.0" layoutY="85.0" prefHeight="34.0" prefWidth="194.0" promptText="Aantal kilometers gereisd">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <ComboBox layoutX="280.0" layoutY="137.0" prefHeight="34.0" prefWidth="194.0" promptText="Selecteer voertuig" />
-            <Button layoutX="280.0" layoutY="194.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="194.0" style="-fx-background-color: #1AFF00;" text="Bevestigen" textFill="WHITE" />
+            <ComboBox fx:id="vehicleField" layoutX="280.0" layoutY="137.0" prefHeight="34.0" prefWidth="194.0" promptText="Selecteer voertuig" />
+            <Button fx:id="confirmBtn" layoutX="280.0" layoutY="194.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="194.0" style="-fx-background-color: #1AFF00;" text="Bevestigen" textFill="WHITE" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="101.0" fitWidth="165.0" layoutX="23.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
@@ -43,6 +42,6 @@
             <Image url="@images/logo.png" />
          </image>
       </ImageView>
-      <Button layoutX="689.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Utloggen" textFill="WHITE" />
+      <Button fx:id="logoutBtn" layoutX="689.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Utloggen" textFill="WHITE" />
    </children>
 </AnchorPane>
