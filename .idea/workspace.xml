@@ -30,6 +30,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/example/greenfuture" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sebas\Documenten\2122-Projectgroep-4d\src\main\resources\com\example\greenfuture" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name=" main " type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.greenfuture.HelloApplication" />
+      <module name="GreenFuture" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -40,7 +59,17 @@
       <option name="presentableId" value="Default" />
       <updated>1652709412549</updated>
       <workItem from="1652709413928" duration="305000" />
+      <workItem from="1653308938071" duration="3416000" />
+      <workItem from="1653312932640" duration="1164000" />
     </task>
+    <task id="LOCAL-00001" summary="Add login page">
+      <created>1653309539005</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1653309539005</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -59,5 +88,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Add login page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add login page" />
   </component>
 </project>
