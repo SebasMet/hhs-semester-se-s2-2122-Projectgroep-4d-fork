@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="34.0" layoutY="245.0" prefHeight="310.0" prefWidth="726.0" style="-fx-background-color: #11AC00;">
+         <children>
+            <AnchorPane layoutX="67.0" layoutY="40.0" prefHeight="244.0" prefWidth="174.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <ImageView fitHeight="145.0" fitWidth="145.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/satisfaction.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="todayLabel" alignment="CENTER" layoutX="4.0" layoutY="167.0" prefHeight="74.0" prefWidth="166.0" text="Vandaag: 50km / 320g CO2" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="260.0" layoutY="93.0" prefHeight="34.0" prefWidth="368.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label fx:id="monthLabel" layoutX="14.0" layoutY="1.0" prefHeight="34.0" prefWidth="326.0" text="Deze maand: 175 km / 800g CO2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="260.0" layoutY="144.0" prefHeight="34.0" prefWidth="368.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label fx:id="yearLabel" layoutX="14.0" layoutY="1.0" prefHeight="34.0" prefWidth="326.0" text="Dit jaar: 1175 km / 5000g CO2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="260.0" layoutY="198.0" prefHeight="34.0" prefWidth="368.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label fx:id="wonChallengesLabel" layoutX="14.0" layoutY="1.0" prefHeight="34.0" prefWidth="326.0" text="Aantal gewonnen challenges: 50">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="260.0" layoutY="249.0" prefHeight="34.0" prefWidth="368.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label fx:id="pointsLabel" layoutX="14.0" prefHeight="34.0" prefWidth="326.0" text="Aantal punten: 3849">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="260.0" layoutY="40.0" prefHeight="34.0" prefWidth="368.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <Label fx:id="weekLabel" layoutX="17.0" layoutY="1.0" prefHeight="34.0" prefWidth="326.0" text="Deze week: 75 km / 500g CO2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="33.0" layoutY="192.0" prefHeight="37.0" prefWidth="726.0" style="-fx-background-color: #11AC00;">
+         <children>
+            <Button fx:id="backBtn" layoutX="642.0" layoutY="5.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #FFFFFF;" text="Terug" />
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="14.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/satisfaction.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="63.0" layoutY="10.0" text="Voortgang bekijken" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="logoutBtn" layoutX="680.0" layoutY="26.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Uitloggen" textFill="WHITE" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

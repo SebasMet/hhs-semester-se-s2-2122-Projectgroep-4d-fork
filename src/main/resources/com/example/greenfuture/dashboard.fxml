@@ -77,8 +77,8 @@
                         <Image url="@images/flag.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="40.0" layoutY="99.0" text="Challanges" textFill="WHITE" />
-                  <Button fx:id="challangesBtn" mnemonicParsing="false" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
+                  <Label layoutX="40.0" layoutY="99.0" text="Challenges" textFill="WHITE" />
+                  <Button fx:id="challengesBtn" mnemonicParsing="false" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="147.0" layoutY="217.0" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #15D200;">
