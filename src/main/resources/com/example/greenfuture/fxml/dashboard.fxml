@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.DashboardController">
    <children>
       <AnchorPane prefHeight="222.0" prefWidth="800.0">
          <children>
@@ -19,7 +19,7 @@
             </Label>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/logo.png" />
+                  <Image url="@../images/logo.png" />
                </image>
             </ImageView>
          </children>
@@ -30,7 +30,7 @@
                <children>
                   <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/satisfaction.png" />
+                        <Image url="@../images/satisfaction.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="16.0" layoutY="97.0" text="Voortgang bekijken" textFill="WHITE" />
@@ -42,7 +42,7 @@
                   <Button fx:id="informationBtn" mnemonicParsing="false" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
                   <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/information.png" />
+                        <Image url="@../images/information.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="41.0" layoutY="98.0" text="Informatie" textFill="WHITE" />
@@ -52,7 +52,7 @@
                <children>
                   <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/plus.png" />
+                        <Image url="@../images/plus.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="24.0" layoutY="98.0" text="Reisdata invullen" textFill="WHITE" />
@@ -63,7 +63,7 @@
                <children>
                   <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/score.png" />
+                        <Image url="@../images/score.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="38.0" layoutY="100.0" text="Scoreboard" textFill="WHITE" />
@@ -74,7 +74,7 @@
                <children>
                   <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/flag.png" />
+                        <Image url="@../images/flag.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="40.0" layoutY="99.0" text="Challenges" textFill="WHITE" />
@@ -85,7 +85,7 @@
                <children>
                   <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@images/user.png" />
+                        <Image url="@../images/user.png" />
                      </image>
                   </ImageView>
                   <Label layoutX="22.0" layoutY="98.0" text="Accountgegevens" textFill="WHITE" />

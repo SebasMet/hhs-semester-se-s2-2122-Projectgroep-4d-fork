@@ -21,7 +21,7 @@
             </Label>
             <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/information.png" />
+                  <Image url="@../images/information.png" />
                </image>
             </ImageView>
          </children>
@@ -38,7 +38,7 @@
       <Button fx:id="logoutBtn" layoutX="684.0" layoutY="46.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Uitloggen" textFill="WHITE" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/logo.png" />
+            <Image url="@../images/logo.png" />
          </image>
       </ImageView>
    </children>

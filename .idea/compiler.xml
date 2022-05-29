@@ -13,4 +13,9 @@
       <module name="GreenFuture" target="18" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="GreenFuture" options="--add-exports javafx.controls/com.sun.javafx.scene.control.skin=com.example.greenfuture" />
+    </option>
+  </component>
 </project>
