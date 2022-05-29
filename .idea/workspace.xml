@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98cc4773-af93-4e66-a2e1-d4ab26e009d7" name="Changes" comment="">
+    <list default="true" id="98cc4773-af93-4e66-a2e1-d4ab26e009d7" name="Changes" comment="Add informatiepagina">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/information.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/greenfuture/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/greenfuture/HelloApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653309539005</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add informatiepagina">
+      <created>1653832477909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1653832477909</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +109,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add login page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add login page" />
+    <MESSAGE value="Add informatiepagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add informatiepagina" />
   </component>
 </project>
