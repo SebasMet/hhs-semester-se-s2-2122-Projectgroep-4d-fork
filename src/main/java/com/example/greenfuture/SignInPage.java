@@ -32,7 +32,7 @@ public class SignInPage {
         users.put("Jochem", "1234");
         users.put("Sebastian", "12345");
         users.put("Vashy", "123456");
-        users.put("Michael", "1234567");
+        users.put("Maikel", "1234567");
 
         if (users.containsKey(username_field.getText())) {
             String passwordOfUser = users.get(username_field.getText());
