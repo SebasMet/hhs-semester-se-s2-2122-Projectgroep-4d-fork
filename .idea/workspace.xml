@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98cc4773-af93-4e66-a2e1-d4ab26e009d7" name="Changes" comment="" />
+    <list default="true" id="98cc4773-af93-4e66-a2e1-d4ab26e009d7" name="Changes" comment="Add login page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,8 +33,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/example/greenfuture" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -61,6 +64,8 @@
       <workItem from="1652709413928" duration="305000" />
       <workItem from="1653308938071" duration="3416000" />
       <workItem from="1653312932640" duration="1164000" />
+      <workItem from="1653831605037" duration="155000" />
+      <workItem from="1653831775291" duration="180000" />
     </task>
     <task id="LOCAL-00001" summary="Add login page">
       <created>1653309539005</created>
