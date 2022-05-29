@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98cc4773-af93-4e66-a2e1-d4ab26e009d7" name="Changes" comment="Add login page">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/controllers/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/controllers/DashboardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/SignInPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/account.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/account.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/challenges.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/challenges.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/defineTrip.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/defineTrip.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/information.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/information.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/progress.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/progress.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/scoreboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/greenfuture/fxml/scoreboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/greenfuture/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/greenfuture/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/greenfuture/SignInPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/greenfuture/controllers/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +82,8 @@
       <workItem from="1653831605037" duration="155000" />
       <workItem from="1653831775291" duration="180000" />
       <workItem from="1653832135003" duration="208000" />
-      <workItem from="1653832360288" duration="10699000" />
+      <workItem from="1653832360288" duration="11299000" />
+      <workItem from="1653850921844" duration="4497000" />
     </task>
     <task id="LOCAL-00001" summary="Add login page">
       <created>1653309539005</created>
