@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="GreenFuture" options="--add-exports javafx.controls/com.sun.javafx.scene.control.skin=com.example.greenfuture" />
+      <module name="GreenFuture" options="" />
     </option>
   </component>
 </project>
