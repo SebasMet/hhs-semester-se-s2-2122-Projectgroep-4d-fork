@@ -1,6 +1,7 @@
 package com.example.greenfuture.controllers;
 
 import com.example.greenfuture.HelloApplication;
+import com.example.greenfuture.StageManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +16,8 @@ import java.net.URL;
 
 public abstract class Controller {
 
+    private StageManager stageManager = StageManager.getInstance();
+
     protected void changeScene(ActionEvent event, String filename, String titleName) throws IOException {
 
         FXMLLoader loader = new FXMLLoader();
@@ -28,8 +31,7 @@ public abstract class Controller {
 
     protected void changeScene(String filename, String titleName) throws IOException {
 
-        ActionEvent event = new ActionEvent();
-        Stage stage = new Stage();
+        Stage stage = stageManager.getStage();
         URL url = getClass().getResource("/com/example/greenfuture/fxml/" + filename + ".fxml");
         FXMLLoader loader = new FXMLLoader(url);
         Parent parent = loader.load();

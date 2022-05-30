@@ -56,7 +56,7 @@
                      </image>
                   </ImageView>
                   <Label layoutX="24.0" layoutY="98.0" text="Reisdata invullen" textFill="WHITE" />
-                  <Button fx:id="defineTripBtn" mnemonicParsing="false" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
+                  <Button fx:id="defineTripBtn" mnemonicParsing="false" onAction="#goDefineTrip" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="511.0" layoutY="40.0" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #15D200;">

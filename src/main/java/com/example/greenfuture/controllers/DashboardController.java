@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.io.IOException;
+
 public class DashboardController extends Controller {
     @FXML
     private Button logout;
@@ -21,6 +23,7 @@ public class DashboardController extends Controller {
     private Button challengesBtn;
     @FXML
     private Button accountBtn;
+
 
 
 }
