@@ -37,8 +37,13 @@ public abstract class Controller {
         Parent parent = loader.load();
 
         Scene scene = new Scene(parent, 800, 600);
+        stage.setResizable(false);
         stage.setTitle(titleName);
         stage.setScene(scene);
         stage.show();
+    }
+
+    protected void toDashboard() throws IOException {
+        changeScene("dashboard", "Dashboard");
     }
 }

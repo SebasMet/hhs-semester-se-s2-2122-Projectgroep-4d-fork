@@ -9,17 +9,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.LoginController">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="loginBtn" layoutX="225.0" layoutY="282.0" mnemonicParsing="false" style="-fx-background-color: #1AFF00;" onAction="#onLoginButtonClick" text="Inloggen" textFill="WHITE" />
-      <PasswordField fx:id="passField" layoutX="225.0" layoutY="243.0" promptText="Wachtwoord" />
-      <TextField fx:id="nameField" layoutX="225.0" layoutY="200.0" promptText="Naam" />
-      <Label fx:id="welcomeLabel" alignment="CENTER" layoutX="224.0" layoutY="167.0" prefHeight="20.0" prefWidth="149.0" text="Welkom" textAlignment="CENTER" textFill="WHITE">
+      <TextField fx:id="nameField" layoutX="325.0" layoutY="256.0" promptText="Naam" />
+      <PasswordField fx:id="passField" layoutX="325.0" layoutY="299.0" promptText="Wachtwoord" />
+      <Button fx:id="loginBtn" defaultButton="true" layoutX="325.0" layoutY="338.0" mnemonicParsing="false" onAction="#onLoginButtonClick" style="-fx-background-color: #1AFF00;" text="Inloggen" textFill="WHITE" />
+      <Label fx:id="welcomeLabel" alignment="CENTER" layoutY="223.0" prefHeight="20.0" prefWidth="800.0" text="Welkom" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>

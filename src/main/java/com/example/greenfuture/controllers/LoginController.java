@@ -34,7 +34,7 @@ public class LoginController extends Controller {
 
             if (Objects.equals(passwordOfUser, passField.getText())) {
                 welcomeLabel.setText("Inlog succesvol");
-                changeScene("dashboard", "Dashboard");
+                toDashboard();
             } else
                 welcomeLabel.setText("Dit wachtwoord is incorrect");
         } else
