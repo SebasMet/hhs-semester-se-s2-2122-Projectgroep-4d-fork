@@ -46,4 +46,8 @@ public abstract class Controller {
     protected void toDashboard() throws IOException {
         changeScene("dashboard", "Dashboard");
     }
+
+    protected void toLogin() throws IOException {
+        changeScene("login", "Login");
+    }
 }
