@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.AdminPanel">
    <children>
-      <ListView fx:id="listOfUsers" layoutX="400.0" prefHeight="400.0" prefWidth="200.0" />
+      <ListView fx:id="listOfUsers" layoutX="400.0" onMouseClicked="#onClick" prefHeight="400.0" prefWidth="200.0">
+         <contextMenu>
+            <ContextMenu fx:id="deleteMenu">
+              <items>
+                <MenuItem fx:id="deleteUserButton" mnemonicParsing="false" onAction="#deleteUser" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu></ListView>
       <Button fx:id="printTest" layoutX="120.0" layoutY="145.0" mnemonicParsing="false" onAction="#addUsers" text="Button" />
    </children>
 </AnchorPane>

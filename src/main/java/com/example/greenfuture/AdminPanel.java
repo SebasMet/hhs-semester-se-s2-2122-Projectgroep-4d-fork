@@ -5,7 +5,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Side;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 //Java imports
 import java.io.IOException;
@@ -19,6 +21,9 @@ import java.util.stream.Collectors;
 public class AdminPanel {
 
     @FXML
+    private ContextMenu deleteMenu;
+
+    @FXML
     private ListView<String> listOfUsers;
 
     @FXML
@@ -29,6 +34,17 @@ public class AdminPanel {
         addUsers();
         ObservableList<String> names = FXCollections.observableArrayList(addUsers());
         listOfUsers.setItems(names);
+    }
+
+    @FXML
+    void onClick(MouseEvent event) {
+        //System.out.println("clicked on " + listOfUsers.getSelectionModel().getSelectedItem());
+
+    }
+
+    @FXML
+    void deleteUser(ActionEvent event) {
+        System.out.println(listOfUsers.getSelectionModel().getSelectedItem() + "Deleted");
     }
 
     public List<String> addUsers() {
