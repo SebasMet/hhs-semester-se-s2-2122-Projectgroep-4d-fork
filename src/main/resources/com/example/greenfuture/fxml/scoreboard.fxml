@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.ScoreboardController">
    <children>
       <AnchorPane layoutX="30.0" layoutY="230.0" prefHeight="286.0" prefWidth="736.0" style="-fx-background-color: #11AC00;">
          <children>
@@ -32,7 +31,7 @@
          <children>
             <ImageView fitHeight="40.0" fitWidth="34.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/score.png" />
+                  <Image url="@../images/score.png" />
                </image>
             </ImageView>
             <Label layoutX="56.0" layoutY="12.0" text="Scoreboard" textFill="WHITE">
@@ -40,13 +39,13 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="652.0" layoutY="7.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #FFFFFF;" text="Terug" />
+            <Button layoutX="652.0" layoutY="7.0" mnemonicParsing="false" onAction="#toDashboard" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #FFFFFF;" text="Terug" />
          </children>
       </AnchorPane>
       <Button fx:id="logoutBtn" layoutX="697.0" layoutY="31.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Uitloggen" textFill="WHITE" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/logo.png" />
+            <Image url="@../images/logo.png" />
          </image>
       </ImageView>
    </children>

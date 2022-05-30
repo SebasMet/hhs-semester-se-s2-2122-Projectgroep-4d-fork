@@ -8,12 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.InformationController">
    <children>
       <AnchorPane layoutX="32.0" layoutY="185.0" prefHeight="38.0" prefWidth="735.0" style="-fx-background-color: #11AC00;">
          <children>
-            <Button fx:id="backBtn" layoutX="657.0" layoutY="6.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #FFFFFF;" text="Terug" />
+            <Button fx:id="backBtn" layoutX="657.0" layoutY="6.0" mnemonicParsing="false" onAction="#toDashboard" prefHeight="26.0" prefWidth="64.0" style="-fx-background-color: #FFFFFF;" text="Terug" />
             <Label layoutX="51.0" layoutY="11.0" text="Informatie" textFill="WHITE">
                <font>
                   <Font size="14.0" />
@@ -21,14 +20,14 @@
             </Label>
             <ImageView fitHeight="32.0" fitWidth="28.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/information.png" />
+                  <Image url="@../images/information.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="32.0" layoutY="237.0" prefHeight="302.0" prefWidth="735.0" style="-fx-background-color: #11AC00;">
          <children>
-            <TextArea fx:id="informationTextArea" layoutX="15.0" layoutY="14.0" prefHeight="277.0" prefWidth="706.0" stylesheets="@css/invisibleTextArea.css" text="Hoe werkt het?&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD&#10;&#10;Gegevens toevoegen&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD&#10;&#10;Tips &amp; Tricks bij challenges&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD" wrapText="true">
+            <TextArea fx:id="informationTextArea" layoutX="15.0" layoutY="14.0" prefHeight="277.0" prefWidth="706.0" stylesheets="@../css/invisibleTextArea.css" text="Hoe werkt het?&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD&#10;&#10;Gegevens toevoegen&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD&#10;&#10;Tips &amp; Tricks bij challenges&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
@@ -38,7 +37,7 @@
       <Button fx:id="logoutBtn" layoutX="684.0" layoutY="46.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Uitloggen" textFill="WHITE" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/logo.png" />
+            <Image url="@../images/logo.png" />
          </image>
       </ImageView>
    </children>
