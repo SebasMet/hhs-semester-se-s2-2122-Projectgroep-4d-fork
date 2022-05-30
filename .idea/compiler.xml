@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="GreenFuture" target="17" />
+      <module name="GreenFuture" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
