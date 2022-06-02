@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="GreenFuture" target="18" />
+      <module name="GreenFuture" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
