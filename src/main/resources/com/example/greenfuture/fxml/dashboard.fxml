@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.DashboardController">
+   <children>
+      <AnchorPane prefHeight="222.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="logout" layoutX="694.0" layoutY="37.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Uitloggen" textFill="WHITE" />
+            <Label fx:id="welcomeLabel" layoutX="234.0" layoutY="101.0" prefHeight="43.0" prefWidth="331.0" text="Welkom terug!" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="168.0" prefHeight="434.0" prefWidth="800.0">
+         <children>
+            <AnchorPane layoutX="331.0" layoutY="40.0" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #15D200;">
+               <children>
+                  <ImageView fitHeight="92.0" fitWidth="92.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/satisfaction.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="16.0" layoutY="97.0" text="Voortgang bekijken" textFill="WHITE" />
+                  <Button fx:id="progressBtn" mnemonicParsing="false" onAction="#goToProgress" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="331.0" layoutY="217.0" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #15D200;">
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/information.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="41.0" layoutY="98.0" text="Informatie" textFill="WHITE" />
+                  <Button fx:id="informationBtn" mnemonicParsing="false" onAction="#goToInformation" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="147.0" layoutY="40.0" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #15D200;">
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/plus.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="24.0" layoutY="98.0" text="Reisdata invullen" textFill="WHITE" />
+                  <Button fx:id="defineTripBtn" mnemonicParsing="false" onAction="#goToDefineTrip" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="511.0" layoutY="40.0" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #15D200;">
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/score.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="38.0" layoutY="100.0" text="Scoreboard" textFill="WHITE" />
+                  <Button fx:id="scoreboardBtn" mnemonicParsing="false" onAction="#goToScoreboard" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="511.0" layoutY="217.0" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #15D200;">
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/flag.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="40.0" layoutY="99.0" text="Challenges" textFill="WHITE" />
+                  <Button fx:id="challengesBtn" mnemonicParsing="false" onAction="#goToChallenges" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="147.0" layoutY="217.0" prefHeight="138.0" prefWidth="138.0" style="-fx-background-color: #15D200;">
+               <children>
+                  <ImageView fitHeight="76.0" fitWidth="76.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="22.0" layoutY="98.0" text="Accountgegevens" textFill="WHITE" />
+                  <Button fx:id="accountBtn" mnemonicParsing="false" onAction="#goToAccount" opacity="0.0" prefHeight="138.0" prefWidth="138.0" text="Button" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
