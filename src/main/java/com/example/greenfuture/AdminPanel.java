@@ -48,6 +48,7 @@ public class AdminPanel {
     }
 
     @FXML
+    //TODO: Make testable
     void onAddButtonClicked() {
         if (users.containsKey(usernameAdd.getText()))
             showResult.setText("Deze gebruikersnaam is niet beschikbaar");
