@@ -5,15 +5,16 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.ResourceBundle;
 
-public class ScoreBoard implements Comparable<ScoreBoard>, Initializable {
-    private int points;
+public class ScoreBoard implements  Initializable {
+    private double points;
     private int UserID;
 
     public static ArrayList<ScoreBoard> scoreboardPoints = new ArrayList<ScoreBoard>();
 
-    public ScoreBoard(int points, int UserID){
+    public ScoreBoard(double points, int UserID){
         this.points = points;
         this.UserID = UserID;
 
@@ -30,12 +31,12 @@ public class ScoreBoard implements Comparable<ScoreBoard>, Initializable {
     }
 
 
-    public void AddPoints(int points, int userID){ // voegt punten toe aan de user als de user nog geen punten heeft wordt die aangemaakt
+    public void AddPoints(double points, int userID){ // voegt punten toe aan de user als de user nog geen punten heeft wordt die aangemaakt
         int User = CheckForUserID(userID);
         if (User == -1){
             scoreboardPoints.add(new ScoreBoard(points, userID));
         } else{
-            int NewPoints = points + scoreboardPoints.get(User).getPoints();
+            double NewPoints = points + scoreboardPoints.get(User).getPoints();
             scoreboardPoints.get(User).setPoints(NewPoints);
         }
 
@@ -48,24 +49,28 @@ public class ScoreBoard implements Comparable<ScoreBoard>, Initializable {
     }
 
     public void SortScoreboardPoints(){ //sorteert de arraylist scoreboard points op basis van punten
-        Collections.sort(scoreboardPoints);
+        Collections.sort(scoreboardPoints, comparator);
     }
 
-    @Override
-    public int compareTo(ScoreBoard compareScore){ //zorgt er voor dat het goed gesorteerd word
-        int comparePoints =((ScoreBoard)compareScore).getPoints();
-        return this.points - comparePoints;
-    }
+    public static Comparator<ScoreBoard> comparator = new Comparator<ScoreBoard>() {
+        @Override
+        public int compare(ScoreBoard o1, ScoreBoard o2) {
+            if (o1.getPoints() < o2.getPoints()) return -1;
+            if (o1.getPoints() > o2.getPoints()) return 1;
+            return 0;
+        }
+    };
+
 
     public static ArrayList<ScoreBoard> getScoreboardPoints() {
         return scoreboardPoints;
     }
 
-    public void setPoints(int points) {
+    public void setPoints(double points) {
         this.points = points;
     }
 
-    public int getPoints() {
+    public double getPoints() {
         return points;
     }
 

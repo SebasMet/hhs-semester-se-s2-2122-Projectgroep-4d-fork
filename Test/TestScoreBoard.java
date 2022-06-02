@@ -24,13 +24,13 @@ public class TestScoreBoard {
         //Arrange
         ScoreBoard test = new ScoreBoard(1,1);
         test.scoreboardPoints.add(new ScoreBoard(22,2));
-        int expectedResult = 133;
-        int expectedResult2 = 123;
+        double expectedResult = 133;
+        double expectedResult2 = 123;
         //Act
         test.AddPoints(111,2);
         test.AddPoints(123, 5);
-        int actualResult = test.scoreboardPoints.get(test.CheckForUserID(2)).getPoints();
-        int actualResult2 =test.scoreboardPoints.get(test.CheckForUserID(5)).getPoints();
+        double actualResult = test.scoreboardPoints.get(test.CheckForUserID(2)).getPoints();
+        double actualResult2 =test.scoreboardPoints.get(test.CheckForUserID(5)).getPoints();
         //Assert
         assertEquals(expectedResult,actualResult,0.0001);
         assertEquals(expectedResult2,actualResult2, 0.0001);
