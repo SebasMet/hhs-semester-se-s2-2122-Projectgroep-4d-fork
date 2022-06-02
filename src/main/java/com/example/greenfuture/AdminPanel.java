@@ -20,6 +20,8 @@ import java.util.stream.Collectors;
 
 public class AdminPanel {
 
+    private HashMap<String, String> users = new HashMap<>();
+
     @FXML
     private ContextMenu deleteMenu;
 
@@ -30,56 +32,49 @@ public class AdminPanel {
     private Button printTest;
 
     @FXML
-    void addUsers(ActionEvent event) {
+    private Label showResult;
+
+    @FXML
+    private PasswordField passfieldAdd;
+
+    @FXML
+    private PasswordField passfieldConfirmAdd;
+
+    @FXML
+    private TextField usernameAdd;
+
+    public void initialize() {
         addUsers();
-        ObservableList<String> names = FXCollections.observableArrayList(addUsers());
-        listOfUsers.setItems(names);
     }
 
     @FXML
-    void onClick(MouseEvent event) {
-        //System.out.println("clicked on " + listOfUsers.getSelectionModel().getSelectedItem());
-
+    void onAddButtonClicked() {
+        if (users.containsKey(usernameAdd.getText()))
+            showResult.setText("Deze gebruikersnaam is niet beschikbaar");
+        else {
+            if(passfieldAdd.getText().equals(passfieldConfirmAdd.getText())) {
+                users.put(usernameAdd.getText(), passfieldConfirmAdd.getText());
+                showResult.setText("User added");
+            }
+            else
+                showResult.setText("De wachtwoorden komen niet overeen");
+        }
     }
 
     @FXML
-    void deleteUser(ActionEvent event) {
-        System.out.println(listOfUsers.getSelectionModel().getSelectedItem() + "Deleted");
-    }
-
-    public List<String> addUsers() {
-        //Deze applicatie moet deze list van de SignInPage krijgen
-        HashMap<String, String> users = new HashMap<>();
-
-        users.put("Ahmet", "123");
-        users.put("Jochem", "1234");
-        users.put("Sebastian", "12345");
-        users.put("Vashy", "123456");
-        users.put("Michael1", "1234567");
-        users.put("Ahmet1", "123");
-        users.put("Jochem1", "1234");
-        users.put("Sebastian1", "12345");
-        users.put("Vashy1", "123456");
-        users.put("Michael2", "1234567");
-        users.put("Ahmet3", "123");
-        users.put("Jochem4", "1234");
-        users.put("Sebastian5", "12345");
-        users.put("Vashy3", "123456");
-        users.put("Michael143", "1234567");
-        users.put("Sebasti1an1", "12345");
-        users.put("Vashy11", "123456");
-        users.put("Michae1l2", "1234567");
-        users.put("Ahmet31", "123");
-        users.put("Jochem14", "1234");
-        users.put("Sebast1ian5", "12345");
-        users.put("Vashy31", "123456");
-        users.put("Michae1l143", "1234567");
-
-        List<String> usersString = users.keySet().stream().collect(Collectors.toList());
+    void addUsers() {
+        List<String> usersString = new ArrayList<>(users.keySet());
         for (int i = 0; i < usersString.size(); i++) {
             System.out.println(usersString.get(i));
         }
 
-        return usersString;
+        ObservableList<String> names = FXCollections.observableArrayList(usersString);
+        listOfUsers.setItems(names);
+    }
+
+    @FXML
+    void deleteUser(ActionEvent event) {
+        users.remove(listOfUsers.getSelectionModel().getSelectedItem());
+        addUsers();
     }
 }

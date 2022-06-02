@@ -40,4 +40,23 @@ public class LoginController extends Controller {
         } else
             welcomeLabel.setText("Deze gebruiker bestaat niet");
     }
+
+    @FXML
+    private void onAdminLoginButtonClick() throws IOException {
+        HashMap<String, String> admins = new HashMap<>();
+
+        admins.put("admin", "123");
+
+        if (admins.containsKey(nameField.getText())) {
+            String passwordOfUser = admins.get(nameField.getText());
+
+            if (Objects.equals(passwordOfUser, passField.getText())) {
+                welcomeLabel.setText("Inlog succesvol");
+                changeScene("adminPanel", "Administrator log-in");
+                
+            } else
+                welcomeLabel.setText("Dit wachtwoord is incorrect");
+        } else
+            welcomeLabel.setText("Deze gebruiker bestaat niet");
+    }
 }
