@@ -54,12 +54,17 @@ public class AdminPanel {
             showResult.setText("Deze gebruikersnaam is niet beschikbaar");
         else {
             if(passfieldAdd.getText().equals(passfieldConfirmAdd.getText())) {
-                users.put(usernameAdd.getText(), passfieldConfirmAdd.getText());
+                addNewUser(usernameAdd.getText(), passfieldConfirmAdd.getText());
                 showResult.setText("User added");
             }
             else
                 showResult.setText("De wachtwoorden komen niet overeen");
         }
+    }
+
+    private void addNewUser(String username, String password) {
+        users.put(username, password);
+        addUsers();
     }
 
     @FXML

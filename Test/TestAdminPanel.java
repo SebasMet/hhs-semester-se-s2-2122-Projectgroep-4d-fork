@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class TestAdminPanel {
 
     public void testAdminPanel() {
-        //Arrange
+
 
 
         //Act;
