@@ -21,13 +21,15 @@ public class LoginController extends Controller {
 
     @FXML
     private void onLoginButtonClick() throws IOException {
-        HashMap<String, String> users = new HashMap<>();
+        UserRepository userRepository = UserRepository.getInstance();
 
-        users.put("Ahmet", "123");
-        users.put("Jochem", "1234");
-        users.put("Sebastian", "12345");
-        users.put("Vashy", "123456");
-        users.put("Maikel", "1234567");
+        userRepository.addUser("test", "test");
+
+        userRepository.addUser("Ahmet", "123");
+        userRepository.addUser("Jochem", "1234");
+        userRepository.addUser("Sebastian", "12345");
+        userRepository.addUser("Vashy", "123456");
+        userRepository.addUser("Maikel", "1234567");
 
         if (users.containsKey(nameField.getText())) {
             String passwordOfUser = users.get(nameField.getText());
