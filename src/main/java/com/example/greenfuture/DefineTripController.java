@@ -23,7 +23,7 @@ public class DefineTripController implements Initializable {
     private TextField kms;
 
     @FXML
-    private ObservableList<String> vehicleList = FXCollections.observableArrayList(
+    private final ObservableList<String> vehicleList = FXCollections.observableArrayList(
             "Benzine auto", "Hybride auto", "Diesel auto", "Elektrische auto", "Fiets", "Bus"
     );
 
@@ -34,7 +34,8 @@ public class DefineTripController implements Initializable {
         if (vehicles.getSelectionModel().isEmpty()) return;
 
         // maak nieuw variable met correcte data
-        System.out.println("dit moet je niet zien");
+        Trip trip = new Trip(String.valueOf(vehicles.getSelectionModel().getSelectedItem()), Integer.parseInt(kms.getCharacters().toString()), "henk");
+        System.out.println(trip.getVehicle() + " - " + trip.getDistance() + " - " + trip.getUser());
 
         // sla data ergens op
     }
