@@ -1,14 +1,14 @@
 package com.example.greenfuture;
 
+import javafx.beans.InvalidationListener;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.ResourceBundle;
+import java.util.*;
 
-public class ScoreBoard implements  Initializable {
+public class ScoreBoard{
     private double points;
     private int UserID;
 
@@ -42,13 +42,16 @@ public class ScoreBoard implements  Initializable {
 
     }
 
-    public void PrintScoreboardPoints(){ // print de arraylist scoreboardPoints
+    public static ArrayList<String> PrintScoreboardPoints(){ // print de arraylist scoreboardPoints
+        SortScoreboardPoints();
+        ArrayList<String> List = new ArrayList<>();
         for (int i = 0; i < scoreboardPoints.size(); i++){
-            System.out.println(i + ": " + scoreboardPoints.get(i).getUserID() + " Punten: " + scoreboardPoints.get(i).getPoints());
+            List.add(i + ": " + scoreboardPoints.get(i).getUserID() + " Punten: " + scoreboardPoints.get(i).getPoints());
         }
+        return List;
     }
 
-    public void SortScoreboardPoints(){ //sorteert de arraylist scoreboard points op basis van punten
+    public static void SortScoreboardPoints(){ //sorteert de arraylist scoreboard points op basis van punten
         Collections.sort(scoreboardPoints, comparator);
     }
 
@@ -78,8 +81,7 @@ public class ScoreBoard implements  Initializable {
         return UserID;
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public static void initialize(){
         scoreboardPoints.add(new ScoreBoard(124,1));
         scoreboardPoints.add(new ScoreBoard(314,2));
         scoreboardPoints.add(new ScoreBoard(345,3));
