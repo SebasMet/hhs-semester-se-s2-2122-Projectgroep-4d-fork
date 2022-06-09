@@ -53,7 +53,7 @@ public class DefineTripController extends Controller implements Initializable {
         System.out.println(pointsAssign.calcPoints(trip));
     }
 
-    private void saveTripData() {
+    private void saveTripData() {;
 
     }
 

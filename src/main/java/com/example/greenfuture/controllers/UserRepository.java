@@ -53,4 +53,13 @@ public class UserRepository {
    public HashMap getAll() {
         return users;
     }
+
+    public void addPoints(String username, int points) {
+        users.get(username).addPoints(points);
+    }
+
+    public int getPoints(String username) {
+        return users.get(username).getPoints();
+    }
+
 }
