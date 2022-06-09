@@ -48,7 +48,7 @@ public class DefineTripController extends Controller implements Initializable {
         
     }
 
-    private void saveTripData() {
+    private void saveTripData() {;
 
     }
 
