@@ -1,6 +1,8 @@
 package com.example.greenfuture;
 
 //JavaFX imports
+import com.example.greenfuture.controllers.User;
+import com.example.greenfuture.controllers.UserRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,16 +13,11 @@ import javafx.scene.input.MouseEvent;
 
 //Java imports
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
 public class AdminPanel {
-
-    private HashMap<String, String> users = new HashMap<>();
 
     @FXML
     private ContextMenu deleteMenu;
@@ -30,6 +27,9 @@ public class AdminPanel {
 
     @FXML
     private Button printTest;
+
+    @FXML
+    private CheckBox adminCheckBox;
 
     @FXML
     private Label showResult;
@@ -48,39 +48,47 @@ public class AdminPanel {
     }
 
     @FXML
-    //TODO: Make testable
     void onAddButtonClicked() {
-        if (users.containsKey(usernameAdd.getText()))
+        UserRepository userRepository = UserRepository.getInstance();
+        if (usernameAdd.getCharacters().isEmpty() || passfieldAdd.getCharacters().isEmpty()) {
+            showResult.setText("Passfield or username cant be empty");
+            return;
+        }
+        if (userRepository.exists(usernameAdd.getText()))
             showResult.setText("Deze gebruikersnaam is niet beschikbaar");
         else {
-            if(passfieldAdd.getText().equals(passfieldConfirmAdd.getText())) {
-                addNewUser(usernameAdd.getText(), passfieldConfirmAdd.getText());
-                showResult.setText("User added");
+            if (passfieldAdd.getText().equals(passfieldConfirmAdd.getText())) {
+                if (adminCheckBox.isSelected()) {
+                    userRepository.addAdmin(usernameAdd.getText(), passfieldConfirmAdd.getText());
+                    showResult.setText("Admin added");
+                    addUsers();
+                } else {
+                    userRepository.add(usernameAdd.getText(), passfieldConfirmAdd.getText());
+                    showResult.setText("User added");
+                    addUsers();
+                }
             }
             else
                 showResult.setText("De wachtwoorden komen niet overeen");
         }
     }
 
-    private void addNewUser(String username, String password) {
-        users.put(username, password);
-        addUsers();
-    }
 
     @FXML
     void addUsers() {
-        List<String> usersString = new ArrayList<>(users.keySet());
-        for (int i = 0; i < usersString.size(); i++) {
-            System.out.println(usersString.get(i));
-        }
+        UserRepository userRepository = UserRepository.getInstance();
+        Set<String> keySet = userRepository.getAll().keySet();
 
-        ObservableList<String> names = FXCollections.observableArrayList(usersString);
+        ArrayList<String> listOfKeys = new ArrayList<>(keySet);
+
+        ObservableList<String> names = FXCollections.observableArrayList(listOfKeys);
         listOfUsers.setItems(names);
     }
 
     @FXML
     void deleteUser(ActionEvent event) {
-        users.remove(listOfUsers.getSelectionModel().getSelectedItem());
+        UserRepository userRepository = UserRepository.getInstance();
+        userRepository.delete(listOfUsers.getSelectionModel().getSelectedItem());
         addUsers();
     }
 }

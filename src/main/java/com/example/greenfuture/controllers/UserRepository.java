@@ -21,8 +21,8 @@ public class UserRepository {
         users.put(username, new User(password, false));
    }
 
-   public void addAdmin(String username, String password, boolean isAdmin) {
-        users.put(username, new User(password, isAdmin));
+   public void addAdmin(String username, String password) {
+        users.put(username, new User(password, true));
    }
 
    public String getPassword(String username) {
@@ -45,4 +45,12 @@ public class UserRepository {
    public boolean isAdmin(String username) {
         return users.get(username).isAdmin();
    }
+
+   public void delete(String username) {
+        users.remove(username);
+   }
+
+   public HashMap getAll() {
+        return users;
+    }
 }
