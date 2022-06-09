@@ -1,5 +1,6 @@
 package com.example.greenfuture.controllers;
 
+import com.example.greenfuture.PointsAssign;
 import com.example.greenfuture.Trip;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -42,10 +43,14 @@ public class DefineTripController extends Controller implements Initializable {
         System.out.println(trip.getVehicle() + " - " + trip.getDistance() + " - " + trip.getUser());
 
         // sla data ergens op
+
+        // calculate points
+        calculatePoints(trip);
     }
 
-    private void calculatePoints() {
-        
+    private void calculatePoints(Trip trip) {
+        PointsAssign pointsAssign = new PointsAssign();
+        System.out.println(pointsAssign.calcPoints(trip));
     }
 
     private void saveTripData() {
