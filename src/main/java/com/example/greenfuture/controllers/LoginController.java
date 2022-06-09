@@ -32,6 +32,7 @@ public class LoginController extends Controller {
                 if (userRepository.isAdmin(nameField.getText())) {
                     changeScene("adminPanel", "Administrator log-in");
                 } else {
+                    userRepository.setLoggedInUser(nameField.getText());
                     welcomeLabel.setText("Inlog succesvol");
                     toDashboard();
                 }

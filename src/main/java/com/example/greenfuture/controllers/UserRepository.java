@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class UserRepository {
 
+    private String loggedInUser;
+
     private static UserRepository instance = null;
     
     private HashMap<String, User> users = new HashMap<>();
@@ -62,4 +64,15 @@ public class UserRepository {
         return users.get(username).getPoints();
     }
 
+    public void logIn(String username) {
+        users.get(username).setLoggedIn(true);
+    }
+
+    public String getLoggedInUser() {
+        return loggedInUser;
+    }
+
+    public void setLoggedInUser(String loggedInUser) {
+        this.loggedInUser = loggedInUser;
+    }
 }

@@ -12,6 +12,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class DefineTripController extends Controller {
@@ -22,6 +23,8 @@ public class DefineTripController extends Controller {
     public TextField distanceField;
     @FXML
     private Button confirmBtn;
+
+    private final HashMap<String, Integer> transportValue = new HashMap<>();
 
     private final ObservableList<String> vehicleList = FXCollections.observableArrayList(
             "Benzine auto", "Hybride auto", "Diesel auto", "Elektrische auto", "Fiets", "Bus"
@@ -34,35 +37,32 @@ public class DefineTripController extends Controller {
 
     @FXML
     private void confirmTrip() {
-        initialize();
         // controleer of alles is ingevuld
         if (distanceField.getCharacters().isEmpty()) return;
         if (vehicleField.getSelectionModel().isEmpty()) return;
 
-        // maak nieuw variable met correcte data
-        Trip trip = new Trip(String.valueOf(vehicleField.getSelectionModel().getSelectedItem()), Integer.parseInt(distanceField.getCharacters().toString()), "henk");
-        System.out.println(trip.getVehicle() + " - " + trip.getDistance() + " - " + trip.getUser());
+        calculatePoints(Integer.parseInt(distanceField.getText()), vehicleField.getSelectionModel().getSelectedItem());
 
-        // sla data ergens op
-
-        // calculate points
-        calculatePoints(trip);
     }
 
-    private void calculatePoints(Trip trip) {
-        PointsAssign pointsAssign = new PointsAssign();
-        int points = pointsAssign.calcPoints(trip);
-        saveTripData(trip, points);
+    private void calculatePoints(int distance, String vehicle) {
+        saveTripData(distance * transportValue.get(vehicle));
     }
 
-    private void saveTripData(Trip trip, int points) {
-        UserRepository users = UserRepository.getInstance();
-        // users geeft issues met de hashmap
-        users.addPoints(trip.getUser(), points);
-        System.out.println(users.getPoints(trip.getUser()));
+    private void saveTripData(int points) {
+        UserRepository userRepository = UserRepository.getInstance();
+        userRepository.addPoints(userRepository.getLoggedInUser(), points);
+        System.out.println(userRepository.getPoints(userRepository.getLoggedInUser()));
+
     }
 
     public void initialize() {
+        transportValue.put("Benzine auto", 18);
+        transportValue.put("Diesel auto", 20);
+        transportValue.put("Hybride auto", 12);
+        transportValue.put("Elektrische auto", 3);
+        transportValue.put("Bus", 7);
+        transportValue.put("Fiets", 0);
         //vehicleField.getItems().addAll(vehicleList);
         vehicleField.setItems(vehicleList);
     }
