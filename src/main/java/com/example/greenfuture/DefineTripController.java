@@ -40,6 +40,14 @@ public class DefineTripController implements Initializable {
         // sla data ergens op
     }
 
+    private void calculatePoints() {
+
+    }
+
+    private void saveTripData() {
+
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         vehicles.setItems(vehicleList);
