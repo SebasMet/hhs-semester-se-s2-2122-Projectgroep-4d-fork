@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DefineTripController extends Controller implements Initializable {
+public class DefineTripController extends Controller {
 
     @FXML
     public ComboBox<String> vehicleField;
@@ -34,6 +34,7 @@ public class DefineTripController extends Controller implements Initializable {
 
     @FXML
     private void confirmTrip() {
+        initialize();
         // controleer of alles is ingevuld
         if (distanceField.getCharacters().isEmpty()) return;
         if (vehicleField.getSelectionModel().isEmpty()) return;
@@ -50,16 +51,19 @@ public class DefineTripController extends Controller implements Initializable {
 
     private void calculatePoints(Trip trip) {
         PointsAssign pointsAssign = new PointsAssign();
-        System.out.println(pointsAssign.calcPoints(trip));
+        int points = pointsAssign.calcPoints(trip);
+        saveTripData(trip, points);
     }
 
-    private void saveTripData() {;
-
+    private void saveTripData(Trip trip, int points) {
+        UserRepository users = UserRepository.getInstance();
+        // users geeft issues met de hashmap
+        users.addPoints(trip.getUser(), points);
+        System.out.println(users.getPoints(trip.getUser()));
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        vehicleField.getItems().addAll(vehicleList);
+    public void initialize() {
+        //vehicleField.getItems().addAll(vehicleList);
         vehicleField.setItems(vehicleList);
     }
 }
