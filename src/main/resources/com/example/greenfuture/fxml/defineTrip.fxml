@@ -34,7 +34,7 @@
                </font>
             </TextField>
             <ComboBox fx:id="vehicleField" layoutX="280.0" layoutY="137.0" prefHeight="34.0" prefWidth="194.0" promptText="Selecteer voertuig" />
-            <Button fx:id="confirmBtn" layoutX="280.0" layoutY="194.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="194.0" style="-fx-background-color: #1AFF00;" text="Bevestigen" textFill="WHITE" />
+            <Button fx:id="confirmBtn" layoutX="280.0" layoutY="194.0" mnemonicParsing="false" onAction="#confirmTrip" prefHeight="34.0" prefWidth="194.0" style="-fx-background-color: #1AFF00;" text="Bevestigen" textFill="WHITE" />
          </children>
       </AnchorPane>
       <ImageView fitHeight="101.0" fitWidth="165.0" layoutX="23.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
