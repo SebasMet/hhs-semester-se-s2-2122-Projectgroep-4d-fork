@@ -18,13 +18,9 @@ public class DefineTripController extends Controller implements Initializable {
     @FXML
     public ComboBox<String> vehicleField;
     @FXML
+    public TextField distanceField;
+    @FXML
     private Button confirmBtn;
-
-    @FXML
-    private ComboBox<String> vehicles;
-
-    @FXML
-    private TextField kms;
 
     private final ObservableList<String> vehicleList = FXCollections.observableArrayList(
             "Benzine auto", "Hybride auto", "Diesel auto", "Elektrische auto", "Fiets", "Bus"
@@ -38,11 +34,11 @@ public class DefineTripController extends Controller implements Initializable {
     @FXML
     private void confirmTrip() {
         // controleer of alles is ingevuld
-        if (kms.getCharacters().isEmpty()) return;
-        if (vehicles.getSelectionModel().isEmpty()) return;
+        if (distanceField.getCharacters().isEmpty()) return;
+        if (vehicleField.getSelectionModel().isEmpty()) return;
 
         // maak nieuw variable met correcte data
-        Trip trip = new Trip(String.valueOf(vehicles.getSelectionModel().getSelectedItem()), Integer.parseInt(kms.getCharacters().toString()), "henk");
+        Trip trip = new Trip(String.valueOf(vehicleField.getSelectionModel().getSelectedItem()), Integer.parseInt(distanceField.getCharacters().toString()), "henk");
         System.out.println(trip.getVehicle() + " - " + trip.getDistance() + " - " + trip.getUser());
 
         // sla data ergens op
