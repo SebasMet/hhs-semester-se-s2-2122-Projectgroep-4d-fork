@@ -23,18 +23,11 @@ public class LoginController extends Controller {
     private void onLoginButtonClick() throws IOException {
         UserRepository userRepository = UserRepository.getInstance();
 
-        userRepository.addUser("test", "test");
+        userRepository.add("Sebas", "pass");
 
-        userRepository.addUser("Ahmet", "123");
-        userRepository.addUser("Jochem", "1234");
-        userRepository.addUser("Sebastian", "12345");
-        userRepository.addUser("Vashy", "123456");
-        userRepository.addUser("Maikel", "1234567");
+        if (userRepository.exists(nameField.getText())) {
 
-        if (users.containsKey(nameField.getText())) {
-            String passwordOfUser = users.get(nameField.getText());
-
-            if (Objects.equals(passwordOfUser, passField.getText())) {
+            if (Objects.equals(userRepository.getPassword(nameField.getText()), passField.getText())) {
                 welcomeLabel.setText("Inlog succesvol");
                 toDashboard();
             } else
