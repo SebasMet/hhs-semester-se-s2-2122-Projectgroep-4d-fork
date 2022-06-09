@@ -24,22 +24,21 @@ public class LoginController extends Controller {
         UserRepository userRepository = UserRepository.getInstance();
 
         userRepository.add("Sebas", "pass");
-        userRepository.addAdmin("Admin", "pass", true);
+        userRepository.addAdmin("Admin", "pass");
 
         if (userRepository.exists(nameField.getText())) {
 
-            if(userRepository.isAdmin(nameField.getText()))
-                changeScene("adminPanel", "Administrator log-in");
-            else {
-
-                if (Objects.equals(userRepository.getPassword(nameField.getText()), passField.getText())) {
+            if (Objects.equals(userRepository.getPassword(nameField.getText()), passField.getText())) {
+                if (userRepository.isAdmin(nameField.getText())) {
+                    changeScene("adminPanel", "Administrator log-in");
+                } else {
                     welcomeLabel.setText("Inlog succesvol");
                     toDashboard();
-                } else
-                    welcomeLabel.setText("Dit wachtwoord is incorrect");
-            }
-
+                }
+            } else
+                welcomeLabel.setText("Dit wachtwoord is incorrect");
         } else
             welcomeLabel.setText("Deze gebruiker bestaat niet");
     }
 }
+
