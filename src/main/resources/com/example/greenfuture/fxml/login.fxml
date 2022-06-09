@@ -24,6 +24,5 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="adminLoginBtn" defaultButton="true" layoutX="325.0" layoutY="379.0" mnemonicParsing="false" onAction="#onAdminLoginButtonClick" style="-fx-background-color: #1AFF00;" text="Admin log-in" textFill="#019d8a" />
    </children>
 </AnchorPane>

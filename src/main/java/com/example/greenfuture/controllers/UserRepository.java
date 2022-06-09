@@ -21,6 +21,10 @@ public class UserRepository {
         users.put(username, new User(password, false));
    }
 
+   public void addAdmin(String username, String password, boolean isAdmin) {
+        users.put(username, new User(password, isAdmin));
+   }
+
    public String getPassword(String username) {
         if(users.containsKey(username)) {
             return users.get(username).getPassword();
@@ -36,5 +40,9 @@ public class UserRepository {
            return true;
        else
            return false;
+   }
+
+   public boolean isAdmin(String username) {
+        return users.get(username).isAdmin();
    }
 }
