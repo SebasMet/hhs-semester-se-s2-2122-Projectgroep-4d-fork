@@ -10,7 +10,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.AdminPanel">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.AdminPanel">
    <children>
       <ListView fx:id="listOfUsers" layoutX="527.0" layoutY="46.0" prefHeight="556.0" prefWidth="277.0">
          <contextMenu>
@@ -30,6 +30,7 @@
             <Label fx:id="showResult" alignment="CENTER" layoutX="255.0" layoutY="128.0" />
             <Button layoutX="230.0" layoutY="375.0" mnemonicParsing="false" onAction="#onAddButtonClicked" text="Add user" />
             <CheckBox fx:id="adminCheckBox" layoutX="235.0" layoutY="190.0" mnemonicParsing="false" text="Admin" />
+            <Button fx:id="goToLogin" layoutX="240.0" layoutY="534.0" mnemonicParsing="false" onAction="#goToLogin" text="Terug" />
          </children>
       </AnchorPane>
    </children>
