@@ -8,8 +8,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.AccountController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.AccountController">
    <children>
       <Button fx:id="logoutBtn" layoutX="700.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Uitloggen" textFill="WHITE" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -39,7 +40,7 @@
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Button fx:id="confirmBtn" alignment="CENTER" layoutX="275.0" layoutY="194.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="188.0" style="-fx-background-color: #1AFF00;" text="Bevestigen" textFill="WHITE">
+            <Button fx:id="confirmBtn" alignment="CENTER" layoutX="275.0" layoutY="194.0" mnemonicParsing="false" onAction="#onConfirmBtnClick" prefHeight="38.0" prefWidth="188.0" style="-fx-background-color: #1AFF00;" text="Bevestigen" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -54,6 +55,13 @@
                   <Font size="14.0" />
                </font>
             </TextField>
+            <Text layoutX="79.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Points:" />
+            <Label fx:id="pointsLabel" layoutX="87.0" layoutY="94.0" prefHeight="40.0" prefWidth="48.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="showResult" layoutX="355.0" layoutY="24.0" />
          </children>
       </AnchorPane>
    </children>

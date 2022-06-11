@@ -126,4 +126,8 @@ public class UserRepository {
     public void setLoggedInUser(String loggedInUser) {
         this.loggedInUser = loggedInUser;
     }
+
+    public void setPassword(String username, String password) {
+        users.get(username).setNewPassword(password);
+    }
 }

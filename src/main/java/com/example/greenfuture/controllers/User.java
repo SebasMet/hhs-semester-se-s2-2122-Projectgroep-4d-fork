@@ -101,4 +101,8 @@ public class User { //Benzine auto", "Hybride auto", "Diesel auto", "Elektrische
     public boolean isLoggedIn2() {
         return LoggedIn;
     }
+
+    public void setNewPassword(String password) {
+        this.password = password;
+    }
 }

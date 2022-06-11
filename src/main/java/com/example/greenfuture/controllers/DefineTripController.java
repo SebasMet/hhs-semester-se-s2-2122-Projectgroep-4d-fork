@@ -77,7 +77,7 @@ public class DefineTripController extends Controller {
                 userRepository.addPoints(userRepository.getLoggedInUser(), points);
                 break;
             default:
-                System.out.println("error");
+                System.out.println("error vehicle type not known");
         }
         System.out.println(userRepository.getPoints(userRepository.getLoggedInUser()));
 
