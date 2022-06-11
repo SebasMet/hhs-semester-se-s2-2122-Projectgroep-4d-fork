@@ -59,10 +59,6 @@ public class ScoreBoard{
     };
 
 
-    public static ArrayList<ScoreBoard> getScoreboardPoints() {
-        return scoreboardPoints;
-    }
-
     public void setPoints(int points) {
         this.points = points;
     }
