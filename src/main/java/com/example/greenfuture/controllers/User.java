@@ -5,60 +5,72 @@ public class User { //Benzine auto", "Hybride auto", "Diesel auto", "Elektrische
     private boolean isAdmin;
     private boolean LoggedIn = false;
     private int totalPoints;
-    private int gasolineCarPoints;
-    private int hybrideAutoPoints;
-    private int dieselAutoPoints;
-    private int electricAutoPoints;
-    private int bicyclePoints;
-    private int busPoints;
+    private double gasolineCarPoints;
+    private double hybrideAutoPoints;
+    private double dieselAutoPoints;
+    private double electricAutoPoints;
+    private double bicyclePoints;
+    private double busPoints;
+
+    //Gasoline
 
 
-    public int getGasolineCarPoints() {
+    public double getGasolineCarPoints() {
         return gasolineCarPoints;
     }
 
-    public void setGasolineCarPoints(int gasolineCarPoints) {
-        this.gasolineCarPoints = gasolineCarPoints;
+    public void addGasolineCarPoints(int gasolineCarPoints) {
+        this.gasolineCarPoints += gasolineCarPoints;
     }
 
-    public int getHybrideAutoPoints() {
+    //Hybride
+
+    public double getHybrideAutoPoints() {
         return hybrideAutoPoints;
     }
 
-    public void setHybrideAutoPoints(int hybrideAutoPoints) {
-        this.hybrideAutoPoints = hybrideAutoPoints;
+    public void addHybrideAutoPoints(int hybrideAutoPoints) {
+        this.hybrideAutoPoints += hybrideAutoPoints;
     }
 
-    public int getDieselAutoPoints() {
+    //Disel
+
+    public double getDieselAutoPoints() {
         return dieselAutoPoints;
     }
 
-    public void setDieselAutoPoints(int dieselAutoPoints) {
+    public void addDieselAutoPoints(int dieselAutoPoints) {
         this.dieselAutoPoints = dieselAutoPoints;
     }
 
-    public int getElectricAutoPoints() {
+    //ElectricAuto
+
+    public double getElectricAutoPoints() {
         return electricAutoPoints;
     }
 
-    public void setElectricAutoPoints(int electricAutoPoints) {
-        this.electricAutoPoints = electricAutoPoints;
+    public void addElectricAutoPoints(int electricAutoPoints) {
+        this.electricAutoPoints += electricAutoPoints;
     }
 
-    public int getBicyclePoints() {
+    //Bicycle
+
+    public double getBicyclePoints() {
         return bicyclePoints;
     }
 
-    public void setBicyclePoints(int bicyclePoints) {
-        this.bicyclePoints = bicyclePoints;
+    public void addBicyclePoints(int bicyclePoints) {
+        this.bicyclePoints += bicyclePoints;
     }
 
-    public int getBusPoints() {
+    //Bus
+
+    public double getBusPoints() {
         return busPoints;
     }
 
-    public void setBusPoints(int busPoints) {
-        this.busPoints = busPoints;
+    public void addBusPoints(int busPoints) {
+        this.busPoints += busPoints;
     }
 
     public User(String password, boolean isAdmin) {

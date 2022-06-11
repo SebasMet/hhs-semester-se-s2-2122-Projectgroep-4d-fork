@@ -60,6 +60,57 @@ public class UserRepository {
         users.get(username).addPoints(points);
     }
 
+    public void addBicyclePoints(String username, int points) {
+        users.get(username).addBicyclePoints(points);
+    }
+
+    public void addDieselPoints(String username, int points) {
+        users.get(username).addDieselAutoPoints(points);
+    }
+
+    public void addGasolinePoints(String username, int points) {
+        users.get(username).addGasolineCarPoints(points);
+    }
+
+    public void addHybridePoints(String username, int points) {
+        users.get(username).addHybrideAutoPoints(points);
+    }
+
+    public void addBusPoints(String username, int points) {
+        users.get(username).addBusPoints(points);
+    }
+
+    public void addElectricPoints(String username, int points) {
+        users.get(username).addElectricAutoPoints(points);
+    }
+
+    public double getBicyclePoints(String username) {
+        return users.get(username).getBicyclePoints();
+    }
+
+    public double getDieselPoints(String username) {
+        return users.get(username).getDieselAutoPoints();
+    }
+
+    public double getGasolinePoints(String username) {
+        return users.get(username).getGasolineCarPoints();
+    }
+
+    public double getHybridePoints(String username) {
+        return users.get(username).getHybrideAutoPoints();
+    }
+
+    public double getBusPoints(String username) {
+        return users.get(username).getBusPoints();
+    }
+
+    public double getElectricPoints(String username) {
+        return users.get(username).getElectricAutoPoints();
+    }
+
+
+
+
     public int getPoints(String username) {
         return users.get(username).getPoints();
     }

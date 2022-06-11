@@ -46,12 +46,39 @@ public class DefineTripController extends Controller {
     }
 
     private void calculatePoints(int distance, String vehicle) {
-        saveTripData(distance * transportValue.get(vehicle));
+        saveTripData(distance * transportValue.get(vehicle), vehicle);
     }
 
-    private void saveTripData(int points) {
+    private void saveTripData(int points, String vehicle) {
         UserRepository userRepository = UserRepository.getInstance();
-        userRepository.addPoints(userRepository.getLoggedInUser(), points);
+        switch(vehicle) {
+            case "Benzine auto":
+                userRepository.addGasolinePoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Diesel auto":
+                userRepository.addDieselPoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Hybride auto":
+                userRepository.addHybridePoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Elektrische auto":
+                userRepository.addElectricPoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Bus":
+                userRepository.addBusPoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Fiets":
+                userRepository.addBicyclePoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            default:
+                System.out.println("error");
+        }
         System.out.println(userRepository.getPoints(userRepository.getLoggedInUser()));
 
     }
@@ -62,7 +89,7 @@ public class DefineTripController extends Controller {
         transportValue.put("Hybride auto", 12);
         transportValue.put("Elektrische auto", 3);
         transportValue.put("Bus", 7);
-        transportValue.put("Fiets", 0);
+        transportValue.put("Fiets", 1);
         //vehicleField.getItems().addAll(vehicleList);
         vehicleField.setItems(vehicleList);
     }

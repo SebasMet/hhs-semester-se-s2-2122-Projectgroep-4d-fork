@@ -32,8 +32,8 @@
             <AnchorPane layoutX="5.0" layoutY="14.0" prefHeight="59.0" prefWidth="710.0" style="-fx-background-color: #CFDB9D;">
                <children>
                   <Label layoutX="568.0" layoutY="6.0" text="Resterende tijd: 3 dagen" />
-                  <ProgressBar layoutX="57.0" layoutY="21.0" prefWidth="200.0" progress="0.0" style="-fx-background-color: red;" />
-                  <Label layoutX="286.0" layoutY="21.0" text="Fiets 5km naar werk" />
+                  <ProgressBar fx:id="progressBar" layoutX="57.0" layoutY="21.0" prefWidth="200.0" progress="0.0" style="-fx-background-color: red;" />
+                  <Label fx:id="rewardLabel" layoutX="286.0" layoutY="21.0" text="Verdien 400 punten met fietsen" />
                   <Label layoutX="568.0" layoutY="37.0" text="Beloning: 3990 punten" />
                </children></AnchorPane>
             <AnchorPane layoutX="5.0" layoutY="197.0" prefHeight="59.0" prefWidth="710.0" style="-fx-background-color: #CFDB9D;" />
