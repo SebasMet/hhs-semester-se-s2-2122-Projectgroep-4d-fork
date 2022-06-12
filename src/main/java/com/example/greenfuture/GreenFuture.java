@@ -10,6 +10,7 @@ import java.io.IOException;
 public class GreenFuture extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        ScoreBoard.initialize();
         StageManager stageManager = StageManager.getInstance();
         FXMLLoader fxmlLoader = new FXMLLoader(GreenFuture.class.getResource("fxml/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
