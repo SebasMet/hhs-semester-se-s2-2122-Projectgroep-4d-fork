@@ -1,13 +1,16 @@
 package com.example.greenfuture.controllers;
 
 import com.example.greenfuture.PointsAssign;
+import com.example.greenfuture.ScoreBoard;
 import com.example.greenfuture.Trip;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
@@ -23,6 +26,12 @@ public class DefineTripController extends Controller {
     public TextField distanceField;
     @FXML
     private Button confirmBtn;
+    @FXML
+    private ListView<String> InfoList;
+    @FXML
+    private Button InfoButton;
+
+
 
     private final HashMap<String, Integer> transportValue = new HashMap<>();
 
@@ -80,7 +89,6 @@ public class DefineTripController extends Controller {
                 System.out.println("error vehicle type not known");
         }
         System.out.println(userRepository.getPoints(userRepository.getLoggedInUser()));
-
     }
 
     public void initialize() {
@@ -92,5 +100,6 @@ public class DefineTripController extends Controller {
         transportValue.put("Fiets", 1);
         //vehicleField.getItems().addAll(vehicleList);
         vehicleField.setItems(vehicleList);
+        InfoList.getItems().addAll("Punten: ", "Fiets, 0", "Elektrische auto, 3", "Bus, 7", "Hybride auto, 12", "Diesel auto, 18", "Diesel auto, 20");
     }
 }

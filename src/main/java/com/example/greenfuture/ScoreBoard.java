@@ -1,29 +1,23 @@
 package com.example.greenfuture;
 
-import javafx.beans.InvalidationListener;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
-import javafx.fxml.Initializable;
-
-import java.net.URL;
 import java.util.*;
 
 public class ScoreBoard{
-    private double points;
-    private int UserID;
+    private int points;
+    private String UserName;
 
     public static ArrayList<ScoreBoard> scoreboardPoints = new ArrayList<ScoreBoard>();
 
-    public ScoreBoard(double points, int UserID){
+    public ScoreBoard(int points, String UserName){
         this.points = points;
-        this.UserID = UserID;
+        this.UserName = UserName;
 
     }
 
-    public int CheckForUserID(int userID){ //checkt of de User al een value heeft in de arraylist scoreboardpoints
+    public static int CheckForUserID(String userID){ //checkt of de User al een value heeft in de arraylist scoreboardpoints
         int User = -1;
         for (int i = 0; i < scoreboardPoints.size(); i++){
-            if (scoreboardPoints.get(i).getUserID() == userID){
+            if (scoreboardPoints.get(i).getUserName().equalsIgnoreCase(userID)){
                 User = i;
             }
         }
@@ -31,12 +25,12 @@ public class ScoreBoard{
     }
 
 
-    public void AddPoints(double points, int userID){ // voegt punten toe aan de user als de user nog geen punten heeft wordt die aangemaakt
+    public static void AddPoints(int points, String userID){ // voegt punten toe aan de user als de user nog geen punten heeft wordt die aangemaakt
         int User = CheckForUserID(userID);
         if (User == -1){
             scoreboardPoints.add(new ScoreBoard(points, userID));
         } else{
-            double NewPoints = points + scoreboardPoints.get(User).getPoints();
+            int NewPoints = points + scoreboardPoints.get(User).getPoints();
             scoreboardPoints.get(User).setPoints(NewPoints);
         }
 
@@ -46,7 +40,7 @@ public class ScoreBoard{
         SortScoreboardPoints();
         ArrayList<String> List = new ArrayList<>();
         for (int i = 0; i < scoreboardPoints.size(); i++){
-            List.add(i + ": " + scoreboardPoints.get(i).getUserID() + " Punten: " + scoreboardPoints.get(i).getPoints());
+            List.add(i + ": " + scoreboardPoints.get(i).getUserName() + " Punten: " + scoreboardPoints.get(i).getPoints());
         }
         return List;
     }
@@ -65,31 +59,27 @@ public class ScoreBoard{
     };
 
 
-    public static ArrayList<ScoreBoard> getScoreboardPoints() {
-        return scoreboardPoints;
-    }
-
-    public void setPoints(double points) {
+    public void setPoints(int points) {
         this.points = points;
     }
 
-    public double getPoints() {
+    public int getPoints() {
         return points;
     }
 
-    public int getUserID() {
-        return UserID;
+    public String getUserName() {
+        return UserName;
     }
 
     public static void initialize(){
-        scoreboardPoints.add(new ScoreBoard(124,1));
-        scoreboardPoints.add(new ScoreBoard(314,2));
-        scoreboardPoints.add(new ScoreBoard(345,3));
-        scoreboardPoints.add(new ScoreBoard(456,4));
-        scoreboardPoints.add(new ScoreBoard(123,5));
-        scoreboardPoints.add(new ScoreBoard(234,6));
-        scoreboardPoints.add(new ScoreBoard(234672834,7));
-        scoreboardPoints.add(new ScoreBoard(234,8));
-        scoreboardPoints.add(new ScoreBoard(543,9));
+        scoreboardPoints.add(new ScoreBoard(124,"Person1"));
+        scoreboardPoints.add(new ScoreBoard(314,"Person2"));
+        scoreboardPoints.add(new ScoreBoard(345,"Person3"));
+        scoreboardPoints.add(new ScoreBoard(456,"Person4"));
+        scoreboardPoints.add(new ScoreBoard(123,"Person5"));
+        scoreboardPoints.add(new ScoreBoard(234,"Person6"));
+        scoreboardPoints.add(new ScoreBoard(234672834,"Person7"));
+        scoreboardPoints.add(new ScoreBoard(234,"Person8"));
+        scoreboardPoints.add(new ScoreBoard(543,"Person9"));
     }
 }
