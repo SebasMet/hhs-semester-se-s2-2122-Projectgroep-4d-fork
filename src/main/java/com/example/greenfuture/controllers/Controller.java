@@ -1,6 +1,6 @@
 package com.example.greenfuture.controllers;
 
-import com.example.greenfuture.HelloApplication;
+import com.example.greenfuture.GreenFuture;
 import com.example.greenfuture.StageManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

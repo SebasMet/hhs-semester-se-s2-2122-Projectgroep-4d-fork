@@ -2,12 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.ChallengesController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.ChallengesController">
    <children>
       <AnchorPane layoutX="38.0" layoutY="161.0" prefHeight="40.0" prefWidth="719.0" style="-fx-background-color: #11AC00;">
          <children>
@@ -24,12 +27,40 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="38.0" layoutY="217.0" prefHeight="278.0" prefWidth="719.0" style="-fx-background-color: #11AC00;" />
+      <AnchorPane layoutX="41.0" layoutY="215.0" prefHeight="278.0" prefWidth="719.0" style="-fx-background-color: #11AC00;">
+         <children>
+            <AnchorPane layoutX="5.0" layoutY="14.0" prefHeight="59.0" prefWidth="710.0" style="-fx-background-color: #CFDB9D;">
+               <children>
+                  <Label fx:id="timeLabel" layoutX="568.0" layoutY="6.0" />
+                  <ProgressBar fx:id="progressBar" layoutX="57.0" layoutY="21.0" prefWidth="200.0" progress="0.0" style="-fx-background-color: red;" />
+                  <Label fx:id="contentLabel" layoutX="286.0" layoutY="21.0" />
+                  <Label fx:id="rewardLabel" layoutX="568.0" layoutY="37.0" />
+               </children></AnchorPane>
+            <Line endX="618.0" layoutX="101.0" layoutY="170.0" startX="-100.0" />
+            <Text layoutX="280.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Challanges over: 4 dagen 5uur" />
+            <AnchorPane layoutX="5.0" layoutY="87.0" prefHeight="59.0" prefWidth="710.0" style="-fx-background-color: #CFDB9D;">
+               <children>
+                  <Label fx:id="timeLabel1" layoutX="568.0" layoutY="6.0" />
+                  <ProgressBar fx:id="progressBar1" layoutX="57.0" layoutY="21.0" prefWidth="200.0" progress="0.0" style="-fx-background-color: red;" />
+                  <Label fx:id="contentLabel1" layoutX="286.0" layoutY="21.0" />
+                  <Label fx:id="rewardLabel1" layoutX="568.0" layoutY="37.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="5.0" layoutY="187.0" prefHeight="59.0" prefWidth="710.0" style="-fx-background-color: #CFDB9D;">
+               <children>
+                  <Label fx:id="timeLabel2" layoutX="568.0" layoutY="6.0" />
+                  <ProgressBar fx:id="progressBar2" layoutX="57.0" layoutY="21.0" prefWidth="200.0" progress="0.0" style="-fx-background-color: red;" />
+                  <Label fx:id="contentLabel2" layoutX="286.0" layoutY="21.0" />
+                  <Label fx:id="rewardLabel2" layoutX="568.0" layoutY="37.0" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
       <Button fx:id="logoutBtn" layoutX="697.0" layoutY="41.0" mnemonicParsing="false" style="-fx-background-color: #FF0000;" text="Uitloggen" textFill="WHITE" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/logo.png" />
          </image>
       </ImageView>
+      <Button layoutX="347.0" layoutY="532.0" mnemonicParsing="false" onAction="#giveReward" style="-fx-background-color: WHITE;" text="Collect Rewards" />
    </children>
 </AnchorPane>

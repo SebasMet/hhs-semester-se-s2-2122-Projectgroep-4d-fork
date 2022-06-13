@@ -21,23 +21,25 @@ public class LoginController extends Controller {
 
     @FXML
     private void onLoginButtonClick() throws IOException {
-        HashMap<String, String> users = new HashMap<>();
+        UserRepository userRepository = UserRepository.getInstance();
 
-        users.put("Ahmet", "123");
-        users.put("Jochem", "1234");
-        users.put("Sebastian", "12345");
-        users.put("Vashy", "123456");
-        users.put("Maikel", "1234567");
+        userRepository.add("Sebas", "pass");
+        userRepository.addAdmin("Admin", "pass");
 
-        if (users.containsKey(nameField.getText())) {
-            String passwordOfUser = users.get(nameField.getText());
+        if (userRepository.exists(nameField.getText())) {
 
-            if (Objects.equals(passwordOfUser, passField.getText())) {
-                welcomeLabel.setText("Inlog succesvol");
-                toDashboard();
+            if (Objects.equals(userRepository.getPassword(nameField.getText()), passField.getText())) {
+                if (userRepository.isAdmin(nameField.getText())) {
+                    changeScene("adminPanel", "Administrator log-in");
+                } else {
+                    userRepository.setLoggedInUser(nameField.getText());
+                    welcomeLabel.setText("Inlog succesvol");
+                    toDashboard();
+                }
             } else
                 welcomeLabel.setText("Dit wachtwoord is incorrect");
         } else
             welcomeLabel.setText("Deze gebruiker bestaat niet");
     }
 }
+

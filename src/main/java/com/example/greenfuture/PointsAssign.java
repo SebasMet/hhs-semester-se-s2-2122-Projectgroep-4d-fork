@@ -4,37 +4,24 @@ import javafx.fxml.Initializable;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
-public class PointsAssign implements Initializable {
-    private String vehicle;
-    private double points;
+public class PointsAssign {
 
-    public ArrayList<PointsAssign> pointsAssigns = new ArrayList<>();
+    private final HashMap<String, Integer> transportValue = new HashMap<>();
 
-    public  PointsAssign(String vehicle, double points){
-        this.vehicle = vehicle;
-        this.points = points;
-    }
-    
-    public double getPoints() {
-        return points;
+    public int calcPoints(Trip trip){
+        initialize();
+        return transportValue.get(trip.getVehicle()) * trip.getDistance();
     }
 
-    public double calcPoints(PointsAssign Pick, int km){
-        return Pick.getPoints() * km;
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        pointsAssigns.add(new PointsAssign("Bus", 5.4));
-        pointsAssigns.add(new PointsAssign("Auto(bezine)", 16.4));
-        pointsAssigns.add(new PointsAssign("Auto(diesel)", 16.7));
-        pointsAssigns.add(new PointsAssign("Auto(hybride)", 11.7));
-        pointsAssigns.add(new PointsAssign("Auto(elektrish)", 6.9));
-        pointsAssigns.add(new PointsAssign("Trein", 2.6));
-        pointsAssigns.add(new PointsAssign("vliegtuig", 30));
-        pointsAssigns.add(new PointsAssign("Fiets(elekitrish)", 0.9));
-        pointsAssigns.add(new PointsAssign("Fiets", 0));
+    public void initialize() {
+        transportValue.put("Benzine auto", 18);
+        transportValue.put("Diesel auto", 20);
+        transportValue.put("Hybride auto", 12);
+        transportValue.put("Elektrische auto", 3);
+        transportValue.put("Bus", 7);
+        transportValue.put("Fiets", 0);
     }
 }

@@ -7,11 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class GreenFuture extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        ScoreBoard.initialize();
         StageManager stageManager = StageManager.getInstance();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("fxml/login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(GreenFuture.class.getResource("fxml/login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setResizable(false);
         stage.setTitle("Login");
