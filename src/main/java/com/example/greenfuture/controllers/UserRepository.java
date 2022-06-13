@@ -42,9 +42,7 @@ public class UserRepository {
            return false;
    }
 
-   public boolean isAdmin(String username) {
-        return users.get(username).isAdmin();
-   }
+   public boolean isAdmin(String username) {return users.get(username).isAdmin();}
 
    public void delete(String username) {
         users.remove(username);
