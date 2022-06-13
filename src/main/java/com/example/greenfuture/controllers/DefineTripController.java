@@ -15,6 +15,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class DefineTripController extends Controller {
@@ -32,6 +33,8 @@ public class DefineTripController extends Controller {
 
 
 
+    private final HashMap<String, Integer> transportValue = new HashMap<>();
+
     private final ObservableList<String> vehicleList = FXCollections.observableArrayList(
             "Benzine auto", "Hybride auto", "Diesel auto", "Elektrische auto", "Fiets", "Bus"
     );
@@ -43,47 +46,58 @@ public class DefineTripController extends Controller {
 
     @FXML
     private void confirmTrip() {
-        initialize();
         // controleer of alles is ingevuld
         if (distanceField.getCharacters().isEmpty()) return;
         if (vehicleField.getSelectionModel().isEmpty()) return;
 
-        // maak nieuw variable met correcte data
-        Trip trip = new Trip(String.valueOf(vehicleField.getSelectionModel().getSelectedItem()), Integer.parseInt(distanceField.getCharacters().toString()), "henk");
-        System.out.println(trip.getVehicle() + " - " + trip.getDistance() + " - " + trip.getUser());
+        calculatePoints(Integer.parseInt(distanceField.getText()), vehicleField.getSelectionModel().getSelectedItem());
 
-        // sla data ergens op
-
-        // calculate points
-        calculatePoints(trip);
     }
 
-    @FXML // zorgt er voor dat als de Info button wordt geclickt de InfoList wordt weergegeven en als de list er is, verdwijnt het.
-    public void InfoButtonCLicked(Event e){
-        if (InfoList.isVisible()){
-            InfoList.setVisible(false);
-        }else{
-            InfoList.setVisible(true);
+    private void calculatePoints(int distance, String vehicle) {
+        saveTripData(distance * transportValue.get(vehicle), vehicle);
+    }
+
+    private void saveTripData(int points, String vehicle) {
+        UserRepository userRepository = UserRepository.getInstance();
+        switch(vehicle) {
+            case "Benzine auto":
+                userRepository.addGasolinePoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Diesel auto":
+                userRepository.addDieselPoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Hybride auto":
+                userRepository.addHybridePoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Elektrische auto":
+                userRepository.addElectricPoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Bus":
+                userRepository.addBusPoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            case "Fiets":
+                userRepository.addBicyclePoints(userRepository.getLoggedInUser(), points);
+                userRepository.addPoints(userRepository.getLoggedInUser(), points);
+                break;
+            default:
+                System.out.println("error vehicle type not known");
         }
-    }
-
-
-    private void calculatePoints(Trip trip) {
-        PointsAssign pointsAssign = new PointsAssign();
-        int points = pointsAssign.calcPoints(trip);
-        saveTripData(trip, points);
-    }
-
-    private void saveTripData(Trip trip, int points) {
-        UserRepository users = UserRepository.getInstance();
-        ScoreBoard scoreBoard = new ScoreBoard(1,"!");
-        // users geeft issues met de hashmap
-        ScoreBoard.AddPoints(points, trip.getUser());
-        users.addPoints(trip.getUser(), points);
-        System.out.println(users.getPoints(trip.getUser()));
+        System.out.println(userRepository.getPoints(userRepository.getLoggedInUser()));
     }
 
     public void initialize() {
+        transportValue.put("Benzine auto", 18);
+        transportValue.put("Diesel auto", 20);
+        transportValue.put("Hybride auto", 12);
+        transportValue.put("Elektrische auto", 3);
+        transportValue.put("Bus", 7);
+        transportValue.put("Fiets", 1);
         //vehicleField.getItems().addAll(vehicleList);
         vehicleField.setItems(vehicleList);
         InfoList.getItems().addAll("Punten: ", "Fiets, 0", "Elektrische auto, 3", "Bus, 7", "Hybride auto, 12", "Diesel auto, 18", "Diesel auto, 20");
