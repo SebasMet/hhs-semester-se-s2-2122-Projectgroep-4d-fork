@@ -25,7 +25,6 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="InfoButton" layoutX="618.0" layoutY="5.0" mnemonicParsing="false" onAction="#InfoButtonCLicked" text="Info" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="23.0" layoutY="182.0" prefHeight="343.0" prefWidth="755.0" style="-fx-background-color: #11AC00;">
