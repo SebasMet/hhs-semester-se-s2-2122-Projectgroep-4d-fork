@@ -1,4 +1,4 @@
-package com.example.greenfuture;
+package com.example.greenfuture.controllers;
 
 //JavaFX imports
 import com.example.greenfuture.controllers.User;
@@ -17,7 +17,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-public class AdminPanel {
+public class AdminPanel extends Controller {
 
     @FXML
     private ContextMenu deleteMenu;
@@ -90,5 +90,11 @@ public class AdminPanel {
         UserRepository userRepository = UserRepository.getInstance();
         userRepository.delete(listOfUsers.getSelectionModel().getSelectedItem());
         addUsers();
+    }
+
+    @FXML
+    void goToLogin() throws IOException {
+        changeScene("login", "Log-in");
+
     }
 }
