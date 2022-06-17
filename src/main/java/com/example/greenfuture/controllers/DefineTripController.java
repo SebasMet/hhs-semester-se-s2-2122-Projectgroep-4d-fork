@@ -88,7 +88,17 @@ public class DefineTripController extends Controller {
             default:
                 System.out.println("error vehicle type not known");
         }
+        ScoreBoard.AddPoints(points, userRepository.getLoggedInUser());
         System.out.println(userRepository.getPoints(userRepository.getLoggedInUser()));
+    }
+
+    @FXML // zorgt er voor dat als de Info button wordt geclickt de InfoList wordt weergegeven en als de list er is, verdwijnt het.
+    public void InfoButtonCLicked(Event e){
+        if (InfoList.isVisible()){
+            InfoList.setVisible(false);
+        }else{
+            InfoList.setVisible(true);
+        }
     }
 
     public void initialize() {

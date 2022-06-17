@@ -11,6 +11,7 @@ public class User { //Benzine auto", "Hybride auto", "Diesel auto", "Elektrische
     private double electricAutoPoints;
     private double bicyclePoints;
     private double busPoints;
+    private String Badge;
 
     //Gasoline
 
@@ -104,5 +105,13 @@ public class User { //Benzine auto", "Hybride auto", "Diesel auto", "Elektrische
 
     public void setNewPassword(String password) {
         this.password = password;
+    }
+
+    public String getBadge() {
+        return Badge;
+    }
+
+    public void setBadge(String badge) {
+        Badge = badge;
     }
 }

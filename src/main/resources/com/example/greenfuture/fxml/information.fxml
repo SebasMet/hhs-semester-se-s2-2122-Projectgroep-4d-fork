@@ -27,7 +27,7 @@
       </AnchorPane>
       <AnchorPane layoutX="32.0" layoutY="237.0" prefHeight="302.0" prefWidth="735.0" style="-fx-background-color: #11AC00;">
          <children>
-            <TextArea fx:id="informationTextArea" editable="false" layoutX="15.0" layoutY="14.0" prefHeight="277.0" prefWidth="706.0" stylesheets="@../css/invisibleTextArea.css" text="Hoe werkt het?&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD&#10;&#10;Gegevens toevoegen&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD&#10;&#10;Tips &amp; Tricks bij challenges&#10;JLDKSAJLDSAJDKSAJLDJASKDJASKJDLASKJL&#10;DSJALDJSKALDJSAKDJSALKDJSADKSJAKDSALD" wrapText="true">
+            <TextArea fx:id="informationTextArea" editable="false" layoutX="15.0" layoutY="14.0" prefHeight="277.0" prefWidth="706.0" stylesheets="@../css/invisibleTextArea.css" text="Hoe werkt het?&#10;Green Future geeft punten op basis van hoe meer je uitstood dus hoe meer punten hoe slechter, je kan je voortgang zien bij voortgang bekijken. Er is een ScoreBoard zodat je kan zien wat jou en andermans rank is.&#10;En door challanges te voltooien kan je nog leuke bonussen krijgen.&#10;&#10;&#10;&#10;Gegevens toevoegen&#10;Om je punten te berekenen ga je naar de pagina Reisdata invullen, hier kun je je gereisde KM in voeren en selecteren met welk voertuig dit gedaan is en daarop gebaseerd krijg je punten.&#10;" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>

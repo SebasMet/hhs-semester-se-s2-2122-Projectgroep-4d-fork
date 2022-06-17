@@ -1,20 +1,15 @@
 package com.example.greenfuture.controllers;
 
 //JavaFX imports
-import com.example.greenfuture.controllers.User;
-import com.example.greenfuture.controllers.UserRepository;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.geometry.Side;
 import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
 
 //Java imports
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public class AdminPanel extends Controller {
@@ -43,9 +38,30 @@ public class AdminPanel extends Controller {
     @FXML
     private TextField usernameAdd;
 
+    @FXML
+    private Label badgeOutputText;
+
+    @FXML
+    private TextField badgeTextField;
+
+
     public void initialize() {
         addUsers();
     }
+
+    @FXML
+    void onBadgeButtonClicked() {
+        BadgeFactory badgeFactory = new BadgeFactory();
+
+        if(badgeTextField.getText().isEmpty())
+            badgeOutputText.setText("TextField can't be empty");
+
+        Badge badge = badgeFactory.getBadge(badgeTextField.getText());
+
+        badge.activateBadge();
+    }
+
+
 
     @FXML
     void onAddButtonClicked() {
@@ -95,6 +111,5 @@ public class AdminPanel extends Controller {
     @FXML
     void goToLogin() throws IOException {
         changeScene("login", "Log-in");
-
     }
 }

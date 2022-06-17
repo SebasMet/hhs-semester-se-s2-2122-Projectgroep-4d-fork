@@ -24,9 +24,13 @@ public class AccountController extends Controller {
     @FXML
     private Label showResult;
 
+    @FXML
+    private Label badgeLabel;
+
     public void initialize() {
         UserRepository userRepository = UserRepository.getInstance();
         pointsLabel.setText(String.valueOf(userRepository.getPoints(userRepository.getLoggedInUser())));
+        badgeLabel.setText(userRepository.getActiveBadge("Sebas"));
     }
 
     @FXML

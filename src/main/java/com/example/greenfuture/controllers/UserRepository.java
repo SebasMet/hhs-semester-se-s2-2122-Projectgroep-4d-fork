@@ -44,9 +44,7 @@ public class UserRepository {
            return false;
    }
 
-   public boolean isAdmin(String username) {
-        return users.get(username).isAdmin();
-   }
+   public boolean isAdmin(String username) {return users.get(username).isAdmin();}
 
    public void delete(String username) {
         users.remove(username);
@@ -108,9 +106,6 @@ public class UserRepository {
         return users.get(username).getElectricAutoPoints();
     }
 
-
-
-
     public int getPoints(String username) {
         return users.get(username).getPoints();
     }
@@ -129,5 +124,12 @@ public class UserRepository {
 
     public void setPassword(String username, String password) {
         users.get(username).setNewPassword(password);
+    }
+
+    public String getActiveBadge(String loggedInUser) {
+        return users.get(loggedInUser).getBadge();
+    }
+    public void setActiveBadge(String activeBadge, String loggedInUser) {
+        users.get(loggedInUser).setBadge(activeBadge);
     }
 }

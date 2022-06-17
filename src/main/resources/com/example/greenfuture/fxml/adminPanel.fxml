@@ -9,6 +9,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #008F0A;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.greenfuture.controllers.AdminPanel">
    <children>
@@ -31,6 +32,14 @@
             <Button layoutX="230.0" layoutY="375.0" mnemonicParsing="false" onAction="#onAddButtonClicked" text="Add user" />
             <CheckBox fx:id="adminCheckBox" layoutX="235.0" layoutY="190.0" mnemonicParsing="false" text="Admin" />
             <Button fx:id="goToLogin" layoutX="240.0" layoutY="534.0" mnemonicParsing="false" onAction="#goToLogin" text="Terug" />
+            <AnchorPane layoutX="162.0" layoutY="2.0" prefHeight="161.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="55.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Badges enabelen" />
+                  <TextField fx:id="badgeTextField" layoutX="26.0" layoutY="36.0" promptText="Naam van de badge" />
+                  <Button fx:id="onBadgeButtonClicked" layoutX="74.0" layoutY="68.0" mnemonicParsing="false" text="Set badge" />
+                  <Label fx:id="badgeOutputText" layoutX="14.0" layoutY="107.0" prefHeight="17.0" prefWidth="174.0" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>

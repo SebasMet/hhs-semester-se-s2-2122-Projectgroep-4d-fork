@@ -62,6 +62,8 @@
                </font>
             </Label>
             <Label fx:id="showResult" layoutX="355.0" layoutY="24.0" />
+            <Label fx:id="badgeLabel" layoutX="567.0" layoutY="106.0" prefHeight="1.0" prefWidth="72.0" />
+            <Text layoutX="567.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Badge:" />
          </children>
       </AnchorPane>
    </children>
